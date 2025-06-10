@@ -116,3 +116,10 @@ npm create vite@latest content.frontend -- --template react
 cd content.frontend
 npm install
 npm run dev
+
+
+#Stop and Remove the container and Recreate it 
+
+docker stop react-dev && docker rm react-dev
+
+docker run -it --name react-dev -v /c/Projects/React:/app -w /app -p 3000:3000 node:lts bash
