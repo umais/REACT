@@ -73,6 +73,14 @@ export default function App() {
             >
               Register
             </NavLink>
+            <NavLink
+              to="/playground"
+              className={({ isActive }) =>
+                isActive ? "text-yellow-300 font-semibold" : "hover:text-blue-200"
+              }
+            >
+              Playground
+            </NavLink>
           </div>
         </div>
       </nav>
