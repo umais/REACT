@@ -118,7 +118,7 @@ npm install
 npm run dev
 
 
-#Stop and Remove the container and Recreate it 
+# Stop and Remove the container and Recreate it 
 
 docker stop react-dev && docker rm react-dev
 
