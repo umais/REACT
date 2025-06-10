@@ -123,3 +123,53 @@ npm run dev
 docker stop react-dev && docker rm react-dev
 
 docker run -it --name react-dev -v /c/Projects/React:/app -w /app -p 3000:3000 node:lts bash
+
+
+# If you would like to run dotnet and React together 
+
+docker run -it --name react-dev \
+  -v /c/Projects/React:/app \
+  -w /app \
+  -p 3000:3000 \
+  -p 5000:5000 \
+  node:lts bash -c "cd backend && dotnet run & cd /app && bash"
+
+# How to Install Dotnet in Linux
+
+# Install required packages
+apt-get update && apt-get install -y wget apt-transport-https
+
+# Download and install the Microsoft package signing key and add the package repository
+wget https://packages.microsoft.com/config/debian/12/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+dpkg -i packages-microsoft-prod.deb
+
+# Install the SDK dependencies
+apt-get update && apt-get install -y dotnet-sdk-9.0
+
+
+# how to accomplish this via a single DOCKER File
+
+
+```bash
+FROM mcr.microsoft.com/dotnet/sdk:9.0
+
+# Install Node.js (LTS)
+RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - && \
+    apt-get install -y nodejs
+
+WORKDIR /app
+COPY . .
+
+EXPOSE 3000 5000
+
+CMD bash -c "cd backend && dotnet run & cd frontend && npm install && npm start"
+
+```
+
+
+Then build and run it:
+
+```bash
+docker build -t fullstack-dev .
+docker run -it -p 3000:3000 -p 5000:5000 fullstack-dev
+```
