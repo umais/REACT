@@ -22,21 +22,21 @@ export const Users=[
          { id: 1,
     name: "Nan Wang",
     title: "Programmer",
-    avatarUrl: "https://i.pravatar.cc/150?img=2",
+    avatarUrl: "https://i.pravatar.cc/150?img=45",
     bio: "Building AI-powered platforms to change lives.",
   },
   {
     id: 2,
     name: "Aruna Malla",
     title: "QA engineer",
-    avatarUrl: "https://i.pravatar.cc/150?img=6",
+    avatarUrl: "https://i.pravatar.cc/150?img=19",
     bio: "Passionate about design and user experience.",
   },
   {
     id: 3,
     name: "Amir Saleem",
     title: "Backend Engineer",
-    avatarUrl: "https://i.pravatar.cc/150?img=1",
+    avatarUrl: "https://i.pravatar.cc/150?img=11",
     bio: "Solving problems with scalable APIs.",
   }
 ];
