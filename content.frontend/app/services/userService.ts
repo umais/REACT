@@ -1,0 +1,42 @@
+export const Users=[
+       { id: 1,
+    name: "Umais Siddiqui",
+    title: "Data Scientist",
+    avatarUrl: "https://i.pravatar.cc/150?img=3",
+    bio: "Building AI-powered platforms to change lives.",
+  },
+  {
+    id: 2,
+    name: "Aisha Khan",
+    title: "Frontend Developer",
+    avatarUrl: "https://i.pravatar.cc/150?img=5",
+    bio: "Passionate about design and user experience.",
+  },
+  {
+    id: 3,
+    name: "Zaid Ahmed",
+    title: "Backend Engineer",
+    avatarUrl: "https://i.pravatar.cc/150?img=7",
+    bio: "Solving problems with scalable APIs.",
+  },
+         { id: 1,
+    name: "Nan Wang",
+    title: "Programmer",
+    avatarUrl: "https://i.pravatar.cc/150?img=2",
+    bio: "Building AI-powered platforms to change lives.",
+  },
+  {
+    id: 2,
+    name: "Aruna Malla",
+    title: "QA engineer",
+    avatarUrl: "https://i.pravatar.cc/150?img=6",
+    bio: "Passionate about design and user experience.",
+  },
+  {
+    id: 3,
+    name: "Amir Saleem",
+    title: "Backend Engineer",
+    avatarUrl: "https://i.pravatar.cc/150?img=1",
+    bio: "Solving problems with scalable APIs.",
+  }
+];
