@@ -74,6 +74,14 @@ export default function App() {
               Register
             </NavLink>
             <NavLink
+              to="/profile"
+              className={({ isActive }) =>
+                isActive ? "text-yellow-300 font-semibold" : "hover:text-blue-200"
+              }
+            >
+              Profile
+            </NavLink>
+            <NavLink
               to="/playground"
               className={({ isActive }) =>
                 isActive ? "text-yellow-300 font-semibold" : "hover:text-blue-200"

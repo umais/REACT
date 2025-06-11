@@ -162,7 +162,7 @@ COPY . .
 
 EXPOSE 3000 5000
 
-CMD bash -c "cd backend && dotnet run & cd frontend && npm install && npm start"
+CMD bash -c "cd content.api && dotnet run & cd content.frontend && npm install && npm start"
 
 ```
 
