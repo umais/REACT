@@ -19,6 +19,17 @@ const [message,setMessage]=useState("");
 
 const[list,setList]=useState<FormData[]>([]);
 
+useEffect(()=>{
+  const storedList=localStorage.getItem("contactus");
+  if(storedList){
+    setList(JSON.parse(storedList));
+  }
+},[]);
+
+useEffect(()=>{
+  localStorage.setItem("contactus",JSON.stringify(list));
+},[list]);
+
 const handleSubmit=(e:React.FormEvent<HTMLFormElement>)=>{
     e.preventDefault();
      const newItem:FormData={
