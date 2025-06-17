@@ -126,6 +126,10 @@ docker run -it --name react-dev -v /c/Projects/React:/app -w /app -p 3000:3000 n
 
 THE ABOVE COMMAND IS GOOD BECAUSE ONCE YOU CLONE THIS REPO YOU CAN JUST SPIN UP A CONTAINER AND CD IN TO content.frontend folder and run the command npm run dev . Just MAKE SURE THE -v /c/Projects/React:/app matches the path to the folder on your local machine that contains the code. YOU DONT EVEN HAVE TO HAVE NODE OR REACT INSTALLED FOR THIS TO WORK IT WILL RUN IN THE CONTAINER.
 
+IF CONTAINER ALREADY EXISTS JUST RUN THE SECOND COMMAND TO START IT UP AGAIN.
+docker start react-dev
+docker exec -it react-dev  bash   
+
 
 # If you would like to run dotnet and React together 
 
