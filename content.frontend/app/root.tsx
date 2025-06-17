@@ -88,6 +88,14 @@ export default function App() {
               }
             >
               Playground
+            </NavLink> 
+            <NavLink
+              to="/contactus"
+              className={({ isActive }) =>
+                isActive ? "text-yellow-300 font-semibold" : "hover:text-blue-200"
+              }
+            >
+              Contact Us
             </NavLink>
           </div>
         </div>
